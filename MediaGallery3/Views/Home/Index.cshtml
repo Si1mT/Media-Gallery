@@ -2,6 +2,21 @@
     ViewData["Title"] = "Home Page";
 }
 
+<h2>New Photos</h2>
+
+<ul>
+    @foreach (var item in Model.NewPhotos)
+    {
+        <li><img src="/@item.FileName" width="300" /></li>
+    }
+</ul>
+
+<ul>
+    @foreach (var item in Model.PopularPhotos)
+    {
+        <li><img src="/@item.FileName" width="300" /></li>
+    }
+</ul>
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
